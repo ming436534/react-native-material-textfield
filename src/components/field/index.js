@@ -350,6 +350,7 @@ export default class TextField extends PureComponent {
       lineWidth,
       activeLineWidth,
       containerStyle,
+      rowStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
       ...props
@@ -513,7 +514,7 @@ export default class TextField extends PureComponent {
 
           <Label {...labelProps}>{label}</Label>
 
-          <View style={styles.row}>
+          <View style={[styles.row, rowStyle]}>
             {this.renderAffix('prefix', active, focused)}
 
             <TextInput
